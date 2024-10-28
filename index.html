@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Trading Company</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Naveen Trading Company</h1>
+        <p>Welcome to the official website of Naveen Trading Company.</p>
+        <div>
+            <a href="add_to_cart.html" class="btn btn-light">View Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <!-- Diwali Wish Button -->
+    <section id="diwali-wish" class="text-center my-4">
+        <button class="btn btn-danger" onclick="showWish()">🎉 Click here for Diwali Greetings! 🎉</button>
+    </section>
+
+    <!-- Product Gallery -->
+    <section id="product-gallery" class="container my-5">
+        <h2 class="text-center mb-4">Our Top Products</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="img/electric motor.jfif" class="card-img-top" alt="Electric Motor">
+                    <div class="card-body text-center">
+                        <p class="card-text font-weight-bold">Electric Motor</p>
+                        <button class="btn btn-primary" onclick="addToCart('Electric Motor')">Add to Cart</button>
+                        <button class="btn btn-light" onclick="toggleLike(this)">❤️ <span class="like-count">0</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="img/cooler.jfif" class="card-img-top" alt="Cooler">
+                    <div class="card-body text-center">
+                        <p class="card-text font-weight-bold">Cooler</p>
+                        <button class="btn btn-primary" onclick="addToCart('Cooler')">Add to Cart</button>
+                        <button class="btn btn-light" onclick="toggleLike(this)">❤️ <span class="like-count">0</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="img/submersible pump.jfif" class="card-img-top" alt="Submersible Pump">
+                    <div class="card-body text-center">
+                        <p class="card-text font-weight-bold">Submersible Pump</p>
+                        <button class="btn btn-primary" onclick="addToCart('Submersible Pump')">Add to Cart</button>
+                        <button class="btn btn-light" onclick="toggleLike(this)">❤️ <span class="like-count">0</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="img/binding wire.jfif" class="card-img-top" alt="Binding Wire">
+                    <div class="card-body text-center">
+                        <p class="card-text font-weight-bold">Binding Wire</p>
+                        <button class="btn btn-primary" onclick="addToCart('Binding Wire')">Add to Cart</button>
+                        <button class="btn btn-light" onclick="toggleLike(this)">❤️ <span class="like-count">0</span></button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+   <!-- Shop Gallery -->
+<section id="shop-gallery" class="text-center my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h1 class="display-4 font-weight-bold text-primary">For More Products, Visit</h1>
+                <h2 class="text-secondary">Our Shop</h2>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="card shadow-lg border-0">
+                    <img src="img/e1.jpg" class="card-img-top img-fluid rounded" alt="Shop Image">
+                    <div class="card-body">
+                        <p class="card-text text-muted">
+                            Discover a wide range of products available in our store. Visit us for the latest and best deals on quality goods.
+                        </p>
+                        <a href="https://maps.app.goo.gl/8GydjNanyiqGXfG57" target="_blank" class="btn btn-primary btn-lg">Visit Our Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container text-center my-4">
+        <h2>Contact Us</h2>
+        <p>Phone: +91 9839141073 & +91 9956273081</p>
+       
+        <div class="embed-responsive embed-responsive-16by9 rounded border border-success shadow">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.4112033055785!2d82.5739416!3d25.3910427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fdfb3a39fc51b%3A0xd085c31d814a9216!2sNavin%20Trading%20Company!5e0!3m2!1sen!2sin!4v1730112091652!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" class="embed-responsive-item"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-white py-3">
+        © 2024 Electrical Shop | All Rights Reserved
+    </footer>
+
+    <!-- Diwali Popup -->
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-content" class="shadow-lg rounded p-4 text-center">
+            <h2 class="glow-text">Naveen Trading Company wishes you a very Happy Diwali!</h2>
+            <p>From Praveen Baranwal & Naveen Baranwal</p>
+            <div id="diyas">
+                <div class="diya flicker"></div>
+                <div class="diya flicker"></div>
+                <div class="diya flicker"></div>
+            </div>
+            <button onclick="closeWish()" class="btn btn-warning mt-3">Close</button>
+        </div>
+    </div>
+<!-- Notification Area -->
+<div id="add-to-cart-notification" class="notification hidden">Item added to cart!</div>
+
+<script src="index.js"></script>
+</body>
+</html>
